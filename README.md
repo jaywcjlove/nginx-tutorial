@@ -106,7 +106,7 @@ tar zxf nginx-1.13.3.tar.gz
 
 ### 编译安装
 
-然后进入目录编译安装，[configure参数说明](#configure参数说明)
+然后进入目录编译安装，[configure参数说明](#参数说明)
 
 ```bash
 cd nginx-1.11.5
