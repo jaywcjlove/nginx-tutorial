@@ -23,6 +23,9 @@ Nginx版本：`1.11.5`
   - [编译安装](#编译安装)
   - [nginx测试](#nginx测试)
   - [设置全局nginx命令](#设置全局nginx命令)
+- [Mac 安装](#mac-安装)
+  - [安装nginx](#安装nginx)
+  - [启动服务](#启动服务)
 - [开机自启动](#开机自启动)
 - [运维](#运维)
   - [服务管理](#服务管理)
@@ -169,6 +172,78 @@ export PATH
 ```
 
 运行命令 **`source ~/.bash_profile`** 让配置立即生效。你就可以全局运行 `nginx` 命令了。
+
+## Mac 安装
+
+Mac OSX 安装特别简单，首先你需要安装 [Brew](https://brew.sh/)， 通过 `brew` 快速安装 `nginx`。
+
+### 安装nginx
+
+```bash
+brew install nginx
+# Updating Homebrew...
+# ==> Auto-updated Homebrew!
+# Updated 2 taps (homebrew/core, homebrew/cask).
+# ==> Updated Formulae
+# ==> Installing dependencies for nginx: openssl, pcre
+# ==> Installing nginx dependency: openssl
+# ==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2o_1.high_sierra.bottle.tar.gz
+# ######################################################################## 100.0%
+# ==> Pouring openssl-1.0.2o_1.high_sierra.bottle.tar.gz
+# ==> Caveats
+# A CA file has been bootstrapped using certificates from the SystemRoots
+# keychain. To add additional certificates (e.g. the certificates added in
+# the System keychain), place .pem files in
+#   /usr/local/etc/openssl/certs
+# 
+# and run
+#   /usr/local/opt/openssl/bin/c_rehash
+# 
+# This formula is keg-only, which means it was not symlinked into /usr/local,
+# because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
+# 
+# If you need to have this software first in your PATH run:
+#   echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
+# 
+# For compilers to find this software you may need to set:
+#     LDFLAGS:  -L/usr/local/opt/openssl/lib
+#     CPPFLAGS: -I/usr/local/opt/openssl/include
+# For pkg-config to find this software you may need to set:
+#     PKG_CONFIG_PATH: /usr/local/opt/openssl/lib/pkgconfig
+# 
+# ==> Summary
+# 🍺  /usr/local/Cellar/openssl/1.0.2o_1: 1,791 files, 12.3MB
+# ==> Installing nginx dependency: pcre
+# ==> Downloading https://homebrew.bintray.com/bottles/pcre-8.42.high_sierra.bottle.tar.gz
+# ######################################################################## 100.0%
+# ==> Pouring pcre-8.42.high_sierra.bottle.tar.gz
+# 🍺  /usr/local/Cellar/pcre/8.42: 204 files, 5.3MB
+# ==> Installing nginx
+# ==> Downloading https://homebrew.bintray.com/bottles/nginx-1.13.12.high_sierra.bottle.tar.gz
+# ######################################################################## 100.0%
+# ==> Pouring nginx-1.13.12.high_sierra.bottle.tar.gz
+# ==> Caveats
+# Docroot is: /usr/local/var/www
+# 
+# The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+# nginx can run without sudo.
+# 
+# nginx will load all files in /usr/local/etc/nginx/servers/.
+# 
+# To have launchd start nginx now and restart at login:
+#   brew services start nginx
+# Or, if you don't wacd /usr/local/Cellar/nginx/1.13.12/n just run:
+# cd /usr/local/Cellar/nginx/1.13.12/
+```
+
+### 启动服务
+
+注意默认端口不是 `8080` 查看确认端口是否被占用。
+
+```bash
+brew services start nginx
+# http://localhost:8080/
+```
 
 ## 开机自启动
 
