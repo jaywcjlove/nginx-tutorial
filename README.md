@@ -62,6 +62,7 @@ Nginx版本：`1.11.5`
   - [跨域问题](#跨域问题)
   - [跳转到带www的域上面](#跳转到带www的域上面)
   - [代理转发](#代理转发)
+  - [监控状态信息](#监控状态信息)
   - [代理转发连接替换](#代理转发连接替换)
   - [ssl配置](#ssl配置)
   - [强制将http重定向到https](#强制将http重定向到https)
@@ -1145,6 +1146,44 @@ server {
     }
 }
 ```
+
+### 监控状态信息
+
+通过 `nginx -V` 来查看是否有 `with-http_stub_status_module` 该模块。
+
+> `nginx -V` 这里 `V` 是大写的，如果是小写的 `v` 即 `nginx -v`，则不会出现有哪些模块，只会出现 `nginx` 的版本
+
+```nginx
+location /nginx_status {
+    stub_status on;
+    access_log off;
+}
+```
+
+通过 http://127.0.0.1/nginx_status 访问出现下面结果。
+
+```bash
+Active connections: 3
+server accepts handled requests
+ 7 7 5 
+Reading: 0 Writing: 1 Waiting: 2 
+```
+
+1. 主动连接(第 1 行)
+
+当前与http建立的连接数，包括等待的客户端连接：3
+
+2. 服务器接受处理的请求(第 2~3 行)
+
+接受的客户端连接总数目：7  
+处理的客户端连接总数目：7  
+客户端总的请求数目：5  
+
+3. 读取其它信(第 4 行)
+
+当前，nginx读请求连接  
+当前，nginx写响应返回给客户端  
+目前有多少空闲客户端请求连接  
 
 ### 代理转发连接替换
 
