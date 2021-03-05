@@ -1434,6 +1434,8 @@ if ($rule_1 = "21"){
 
 ### cockpit
 
+https://github.com/cockpit-project/cockpit
+
 ```nginx
 server{
     listen 80;
@@ -1460,6 +1462,21 @@ server {
         proxy_set_header Host $http_host;
     }
 }
+```
+
+这时输入域名，能看到登录页面，但登录后，显示不出内容，页面全白。这里要对 `cockpit.conf` 进行设置修改。
+
+```bash
+sudo vim /etc/cockpit/cockpit.conf
+```
+
+参照如下配置修改，注意域名替换为 `your_domain_host`：
+
+```toml
+[WebService]
+Origins = https://cockpit.xxxxxxx.com https://127.0.0.1:9090
+ProtocolHeader = X-Forwarded-Proto
+AllowUnencrypted = true
 ```
 
 ## 错误问题
