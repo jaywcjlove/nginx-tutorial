@@ -71,6 +71,7 @@ Nginx版本：`1.11.5`
   - [防盗图配置](#防盗图配置)	
   - [屏蔽.git等文件](#屏蔽git等文件)	
   - [域名路径加不加需要都能正常访问](#域名路径加不加需要都能正常访问)	
+  - [cockpit](#cockpit)	
 - [错误问题](#错误问题)	
 - [精品文章参考](#精品文章参考)
 
@@ -1428,6 +1429,36 @@ if (!-f $request_filename){
 }
 if ($rule_1 = "21"){
         rewrite ^/ /index.php last;
+}
+```
+
+### cockpit
+
+```nginx
+server{
+    listen 80;
+    server_name cockpit.xxxxxxx.com;
+    return 301 https://$server_name$request_uri;
+}
+ 
+server {
+    listen 443 ssl;
+    server_name cockpit.xxxxxxx.com;
+ 
+    #ssl on;
+    ssl_certificate /etc/nginx/cert/cockpit.xxxxxxx.com.pem;
+    ssl_certificate_key /etc/nginx/cert/cockpit.xxxxxxx.com.key;
+ 
+    location / {
+        root /;
+        index index.html;
+        proxy_redirect off;
+        proxy_pass http://websocket;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $http_host;
+    }
 }
 ```
 
