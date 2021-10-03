@@ -1,9 +1,9 @@
-
 <p align="center">
   <a href="http://nginx.org/">
     <img width="210" src="./nginx.svg" />
   </a>
 </p>
+<!--rehype:style=height: 210px; display: flex; align-items: center; justify-content: center;-->
 
 Nginx 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富模块的第三方模块。
 
