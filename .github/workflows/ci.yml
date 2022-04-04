@@ -15,8 +15,13 @@ jobs:
 
       - run: mkdir -p build
       - run: cp -rp nginx.svg build
-      - run: npm i markdown-to-html-cli -g
-      - run: markdown-to-html --output build/index.html
+
+      - name: Converts Markdown to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: README-zh.md
+          output: build/index.html
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
