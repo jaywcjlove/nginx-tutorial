@@ -5,12 +5,14 @@
 </p>
 <!--rehype:style=height: 210px; display: flex; align-items: center; justify-content: center;-->
 
-Nginx 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富模块的第三方模块。
+[Nginx](https://nginx.org/en/) 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富模块的第三方模块。
 
 所以关于 Nginx，有这些标签：「异步」「事件」「模块化」「高性能」「高并发」「反向代理」「负载均衡」
 
-Linux系统：`Centos 7 x64`
+Linux系统：`Centos 7 x64`  
 Nginx版本：`1.11.5`
+
+<!--idoc:ignore:start-->
 
 目录
 ===
@@ -74,6 +76,8 @@ Nginx版本：`1.11.5`
   - [cockpit](#cockpit)	
 - [错误问题](#错误问题)	
 - [精品文章参考](#精品文章参考)
+
+<!--idoc:ignore:end-->
 
 ## 安装
 
@@ -1534,3 +1538,9 @@ Made with [action-contributors](https://github.com/jaywcjlove/github-action-cont
 ## License
 
 Licensed under the MIT License.
+
+<!--idoc:config:
+site: Nginx Tutorial
+favicon: favicon.svg
+logo: favicon.svg
+-->
