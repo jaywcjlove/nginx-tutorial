@@ -532,12 +532,14 @@ yum remove nginx
 
 例如请求：`http://localhost:3000/test1/test2/test.php`
 
+```
 $host：localhost  
 $server_port：3000  
 $request_uri：/test1/test2/test.php  
 $document_uri：/test1/test2/test.php  
 $document_root：/var/www/html  
 $request_filename：/var/www/html/test1/test2/test.php  
+```
 
 ### 符号参考
 
