@@ -308,13 +308,13 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service t
 
 ```bash
 systemctl is-enabled servicename.service # 查询服务是否开机启动
-systemctl enable *.service # 开机运行服务
+systemctl enable *.service  # 开机运行服务
 systemctl disable *.service # 取消开机运行
-systemctl start *.service # 启动服务
-systemctl stop *.service # 停止服务
+systemctl start *.service   # 启动服务
+systemctl stop *.service    # 停止服务
 systemctl restart *.service # 重启服务
-systemctl reload *.service # 重新加载服务配置文件
-systemctl status *.service # 查询服务运行状态
+systemctl reload *.service  # 重新加载服务配置文件
+systemctl status *.service  # 查询服务运行状态
 systemctl --failed # 显示启动失败的服务
 ```
 
@@ -345,16 +345,12 @@ chmod +x /etc/rc.d/rc.local
 ```bash
 # 启动
 /usr/local/nginx/sbin/nginx
-
 # 重启
 /usr/local/nginx/sbin/nginx -s reload
-
 # 关闭进程
 /usr/local/nginx/sbin/nginx -s stop
-
 # 平滑关闭nginx
 /usr/local/nginx/sbin/nginx -s quit
-
 # 查看nginx的安装状态，
 /usr/local/nginx/sbin/nginx -V 
 ```
