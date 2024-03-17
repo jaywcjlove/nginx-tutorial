@@ -1,4 +1,4 @@
-site: Nginx 入门学习笔记
+site: "Nginx 入门学习笔记"
 logo: "./favicon.svg"
 favicon: "./favicon.svg"
 
@@ -8,6 +8,9 @@ menus:
   Home: index.html
   Sponsor: 
     url: https://wangchujiang.com/#/sponsor
+    target: __blank
+  Apps: 
+    url: https://wangchujiang.com/#/app
     target: __blank
 
 editButton: 
