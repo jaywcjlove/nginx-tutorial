@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>目录 Nginx Tutorial</title>
+    <title>Nginx 入门学习笔记 Nginx 入门学习笔记</title>
     <meta name="description" content="Nginx 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务">
     <meta name="keywords" content="nginx,tutorial,centos,Nginx 入门学习笔记">
     <link rel="stylesheet" type="text/css" href="css/main.css?v=1.29.0">
@@ -25,11 +25,12 @@
             <path d="M413.714787 255.99552H315.736768a102.398208 102.398208 0 0 0-102.398208 102.398208v320.847719a102.398208 102.398208 0 0 0 102.398208 102.398208h80.894584l3.839933-0.068266a102.449407 102.449407 0 0 0 94.086887-72.310201l1.348243-4.880981 23.858782 33.859674A102.398208 102.398208 0 0 0 603.475733 781.639655H701.436685a102.398208 102.398208 0 0 0 102.398208-102.398208V358.393728a102.398208 102.398208 0 0 0-102.398208-102.398208h-80.894584l-3.839933 0.068266a102.449407 102.449407 0 0 0-94.086887 72.310201l-1.36531 4.863915-23.841716-33.842608A102.398208 102.398208 0 0 0 413.69772 255.99552z" fill="#3DA44B"></path>
             <path d="M430.764088 679.241447v-131.888892a17.066368 17.066368 0 0 1 31.009591-9.830228l113.781475 161.379576a34.132736 34.132736 0 0 0 27.903512 14.47228H701.436685a34.132736 34.132736 0 0 0 34.132736-34.132736V358.393728a34.132736 34.132736 0 0 0-34.132736-34.132736h-80.894584a34.132736 34.132736 0 0 0-34.132736 34.132736v131.888892a17.066368 17.066368 0 0 1-31.009591 9.830228l-113.781476-161.379576A34.132736 34.132736 0 0 0 413.69772 324.260992H315.736768a34.132736 34.132736 0 0 0-34.132736 34.132736v320.847719a34.132736 34.132736 0 0 0 34.132736 34.132736h80.894584a34.132736 34.132736 0 0 0 34.132736-34.132736z" fill="#FFFFFF"></path>
           </svg>
-<span class="title">Nginx Tutorial</span></a>
+<span class="title">Nginx 入门学习笔记</span></a>
         <div class="content">
           <ul class="menu">
             <li><a href="index.html" target="" class="active">Home</a></li>
             <li><a href="https://wangchujiang.com/#/sponsor" target="__blank" class="">Sponsor</a></li>
+            <li><a href="https://wangchujiang.com/#/app" target="__blank" class="">Apps</a></li>
           </ul><a href="https://github.com/jaywcjlove/nginx-tutorial" target="_blank" rel="noopener noreferrer" title="Github" name="Github" class="github"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg></a>
@@ -39,7 +40,7 @@
     </header>
     <div class="warpper-content warpper">
       <markdown-style theme-auto-switch-disabled="">
-        <p align="center" style="height: 210px; display: flex; align-items: center; justify-content: center;"><a href="http://nginx.org/"><img width="210" src="nginx.svg"></a></p><!--rehype:style=height: 210px; display: flex; align-items: center; justify-content: center;-->
+        <p align="center" style="height: 210px; display: flex; align-items: center; justify-content: center;"><a href="http://nginx.org/"><img width="160" src="favicon.svg"></a></p><!--rehype:style=height: 210px; display: flex; align-items: center; justify-content: center;-->
         <p><a href="https://jaywcjlove.github.io/#/sponsor"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee" alt="Buy me a coffee"></a></p>
         <p><a href="https://nginx.org/en/">Nginx</a> 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富模块的第三方模块。</p>
         <p>所以关于 Nginx，有这些标签：「异步」「事件」「模块化」「高性能」「高并发」「反向代理」「负载均衡」</p>
@@ -2385,18 +2386,8 @@ AllowUnencrypted = true
         <p>As always, thanks to our amazing contributors!</p><a href="https://github.com/jaywcjlove/nginx-tutorial/graphs/contributors"><img src="https://jaywcjlove.github.io/nginx-tutorial/CONTRIBUTORS.svg"></a>
         <p>Made with <a href="https://github.com/jaywcjlove/github-action-contributors">action-contributors</a>.</p>
         <h2 id="license"><a aria-hidden="true" tabindex="-1" href="#license" class="anchor"><span class="icon icon-link"></span></a>License</h2>
-        <p>Licensed under the MIT License.</p><!--idoc:config:
-        site: Nginx Tutorial
-        favicon: favicon.svg
-        logo: favicon.svg
-        editButton: 
-          label: Edit this page on GitHub
-          url: https://github.com/jaywcjlove/nginx-tutorial/blob/master/
-        footer: |
-          Released under the MIT License. Copyright © 2022 Kenny Wong<br />
-          Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v{{idocVersion}}
-        -->
-        <section class="article-footer"><a href="https://github.com/jaywcjlove/nginx-tutorial/blob/master/README.md" class="edit-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <p>Licensed under the MIT License.</p>
+        <section class="article-footer"><a href="https://github.com/jaywcjlove/nginx-tutorial/tree/master/README.md" class="edit-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
             </svg>
 <span>Edit this page on GitHub</span>
@@ -2497,7 +2488,12 @@ AllowUnencrypted = true
       </nav>
     </div>
     <script src="js/demo-preview.js?v=1.29.0"></script>
-    <div class="footer warpper">Released under the MIT License. Copyright © 2022 Kenny Wong<br>Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v1.29.0</div>
+    <div class="footer warpper">
+      <a href="https://wangchujiang.com/#/app" target="_blank">App</a> •
+      <a href="https://wangchujiang.com/#/projects" target="_blank">Projects</a> •
+      <a href="https://wangchujiang.com/#/sponsor" target="_blank">Sponsor</a> •
+      <a href="https://wangchujiang.com/#/app" target="_blank">More Apps</a><br><br>Released under the MIT License. Copyright © 2024 <a href="https://wangchujiang.com/#/about" target="_blank">Kenny Wong</a><br>Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v1.29.0
+    </div>
     <script src="js/tocbot.js?v=1.29.0"></script>
   </body>
 </html>
