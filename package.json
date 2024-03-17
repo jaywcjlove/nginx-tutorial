@@ -16,20 +16,10 @@
   "keywords": [
     "nginx",
     "tutorial",
-    "centos"
+    "centos",
+    "Nginx 入门学习笔记"
   ],
   "dependencies": {
     "idoc": "^1"
-  },
-  "idoc": {
-    "logo": "./favicon.svg",
-    "favicon": "./favicon.svg",
-    "menus": {
-      "Home": "index.html"
-    },
-    "Sponsor": {
-      "url": "https://wangchujiang.com/#/sponsor",
-      "target": "__blank"
-    }
   }
 }
