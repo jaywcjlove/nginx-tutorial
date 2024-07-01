@@ -22,13 +22,12 @@ Nginx版本：`1.11.5`
 
 ## 目录
 
-
 - [安装](#安装)	
   - [安装依赖](#安装依赖)	
   - [下载](#下载)	
   - [编译安装](#编译安装)	
-  - [nginx测试](#nginx测试)	
-  - [设置全局nginx命令](#设置全局nginx命令)	
+  - [Nginx 测试](#nginx-测试)	
+  - [设置全局 nginx 命令](#设置全局-nginx-命令)	
 - [Mac 安装](#mac-安装)	
   - [安装nginx](#安装nginx)	
   - [启动服务](#启动服务)	
@@ -36,7 +35,7 @@ Nginx版本：`1.11.5`
 - [运维](#运维)	
   - [服务管理](#服务管理)	
   - [重启服务防火墙报错解决](#重启服务防火墙报错解决)	
-- [nginx卸载](#nginx卸载)	
+- [Nginx 卸载](#nginx-卸载)	
 - [参数说明](#参数说明)	
 - [配置](#配置)	
   - [常用正则](#常用正则)	
@@ -70,7 +69,7 @@ Nginx版本：`1.11.5`
   - [代理转发](#代理转发)	
   - [监控状态信息](#监控状态信息)	
   - [代理转发连接替换](#代理转发连接替换)	
-  - [ssl配置](#ssl配置)	
+  - [SSL 配置](#ssl-配置)	
   - [强制将http重定向到https](#强制将http重定向到https)	
   - [两个虚拟主机](#两个虚拟主机)	
   - [虚拟主机标准配置](#虚拟主机标准配置)	
@@ -154,7 +153,7 @@ make
 make install
 ```
 
-### nginx测试
+### Nginx 测试
 
 运行下面命令会出现两个结果，一般情况nginx会安装在`/usr/local/nginx`目录中
 
@@ -166,7 +165,7 @@ cd /usr/local/nginx/sbin/
 # nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ```
 
-### 设置全局nginx命令
+### 设置全局 Nginx 命令
 
 ```bash
 vi ~/.bash_profile
@@ -415,7 +414,7 @@ service iptables restart
 ```
 
 
-## nginx卸载
+## Nginx 卸载
 
 如果通过yum安装，使用下面命令安装。
 
@@ -1093,7 +1092,7 @@ server {
 }
 ```
 
-### 跳转到带www的域上面
+### 跳转到带 www 的域上面
 
 ```nginx
 server {
@@ -1199,7 +1198,7 @@ location ^~/api/upload {
 }
 ```
 
-### ssl配置
+### SSL 配置
 
 超文本传输安全协议（缩写：HTTPS，英语：Hypertext Transfer Protocol Secure）是超文本传输协议和SSL/TLS的组合，用以提供加密通讯及对网络服务器身份的鉴定。HTTPS连接经常被用于万维网上的交易支付和企业信息系统中敏感信息的传输。HTTPS不应与在RFC 2660中定义的安全超文本传输协议（S-HTTP）相混。HTTPS 目前已经是所有注重隐私和安全的网站的首选，随着技术的不断发展，HTTPS 网站已不再是大型网站的专利，所有普通的个人站长和博客均可以自己动手搭建一个安全的加密的网站。
 
