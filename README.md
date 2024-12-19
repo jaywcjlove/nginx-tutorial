@@ -11,9 +11,9 @@
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
 
-[Nginx](https://nginx.org/en/) 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP，HTTPS 和邮件相关(SMTP，POP3，IMAP)的协议链接。并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富模块的第三方模块。
+[Nginx](https://nginx.org/en/) 是一款面向性能设计的 HTTP 服务器，能反向代理 HTTP、HTTPS 和邮件相关（SMTP、POP3、IMAP）的协议链接，并且提供了负载均衡以及 HTTP 缓存。它的设计充分使用异步事件模型，削减上下文调度的开销，提高服务器并发能力。采用了模块化设计，提供了丰富的第三方模块。
 
-所以关于 Nginx，有这些标签：「异步」「事件」「模块化」「高性能」「高并发」「反向代理」「负载均衡」
+关于 Nginx，有这些标签：「异步」「事件」「模块化」「高性能」「高并发」「反向代理」「负载均衡」
 
 Linux系统：`Centos 7 x64`  
 Nginx版本：`1.11.5`
@@ -89,7 +89,7 @@ Nginx版本：`1.11.5`
 
 ### 安装依赖
 
-> prce(重定向支持)和openssl(https支持，如果不需要https可以不安装。)
+> prce（重定向支持）和 openssl（https 支持，如果不需要 https 可以不安装）。
 
 ```bash
 yum install -y pcre-devel 
@@ -97,18 +97,17 @@ yum -y install gcc make gcc-c++ wget
 yum -y install openssl openssl-devel 
 ```
 
-CentOS 6.5 我安装的时候是选择的“基本服务器”，默认这两个包都没安装全，所以这两个都运行安装即可。
+在 CentOS 6.5 上安装时，我选择了“基本服务器”，默认情况下这两个包都没有安装全，所以需要运行上述命令进行安装。
 
 ### 下载
 
-[nginx的所有版本在这里](http://nginx.org/download/)
+[nginx 的所有版本在这里](http://nginx.org/download/)
 
 ```bash
 wget http://nginx.org/download/nginx-1.13.3.tar.gz
 wget http://nginx.org/download/nginx-1.13.7.tar.gz
 
-# 如果没有安装wget
-# 下载已编译版本
+# 如果没有安装 wget
 $ yum install wget
 
 # 解压压缩包
